@@ -2,7 +2,7 @@
 
 # Script para verificar grupo dentro de grupo que traz insegurança no AD #
 
-$groups = Get-ADGroup -Identity "SamAccountName do Grupo" | Select-Object SamAccountName
+$groups = Get-ADGroup -Filter * -properties members | Where-Object {$_.members -like "*OU De Grupos*"} | Select-Object SamAccountName
 $results=@();
 foreach ($group in $groups){
 
