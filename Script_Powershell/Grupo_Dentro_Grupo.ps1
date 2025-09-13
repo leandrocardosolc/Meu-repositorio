@@ -6,41 +6,34 @@ $groups = Get-ADGroup -Identity "SamAccountName do Grupo" | Select-Object SamAcc
 $results=@();
 foreach ($group in $groups){
 
-$users = Get-ADGroupMember -Identity $group.SamAccountName | Where-Object {$_.distinguishedName -notlike "*unidade_organizicional*"} | Select-Object SamAccountName
-foreach ($user in $users){
+$members = Get-ADGroupMember -Identity $group.SamAccountName
+foreach ($member in $members){
 
-if ($user -ne $null){
-$dados = Get-ADUser -Identity $user.SamAccountName -Properties *
+if ($member.distinguishedName -notlike "*OU De Grupos*"){
+$dados = Get-ADUser -Identity $member.SamAccountName -Properties *
 $myObject = [PSCustomObject]@{
     
   Login = $dados.SamAccountName
   # Inserir atributos do Usuário de acordo com a necessidade #
   Grupo = $group.SamAccountName
 }
-
 $results+= $myObject;
-$results | Export-Csv -Path "c:\temp\Nome do Grupo Principal.csv" -Delimiter ";" -Encoding UTF8 -NoTypeInformation 
-}
-}
-
-$membergroups = Get-ADGroupMember -Identity $group.SamAccountName | Where-Object {$_.distinguishedName -like "*unidade_organizicional*"}
-foreach ($membergroup in $membergroups) {
-
-$grupotwo = Get-ADGroup -Identity $membergroup.SamAccountName
-$members = Get-ADGroupMember -Identity $grupotwo.SamAccountName | Where-Object {$_.distinguishedName -notlike "*unidade_organizicional*"} | Select-Object SamAccountName
-foreach ($member in $members){
-
+} else{
+$subGroup = Get-ADGroup -Identity $member.SamAccountName
+$subMembers = Get-ADGroupMember -Identity $subGroup.SamAccountName | Where-Obejct {
+    $_.distinguishedName -notlike "*OU De Grupos*"
+} foreach ($subMember in $subMembers){
 $dados = Get-ADUser -Identity $member.SamAccountName -Properties *
 $myObject = [PSCustomObject]@{
-  
+    
   Login = $dados.SamAccountName
   # Inserir atributos do Usuário de acordo com a necessidade #
-  Grupo = $group.SamAccountName + ("/") + $grupotwo.SamAccountName
-
-}
-
+  Grupo = "$($group.SamAccountName) / $($subGroup.SamAccountName)"
+} 
 $results+= $myObject;
-$results | Export-Csv -Path "c:\temp\Nome do Grupo Principal.csv" -Delimiter ";" -Encoding UTF8 -NoTypeInformation 
 }
 }
 }
+}
+
+$results | Export-csv -path "c:\temp\Nome Arquivo.csv" -Delimiter ";" -Encoding UTF8 -NoTypeInformation
