@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Studio Beleza</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/posts">Home</a>
+    {{#if userSession}}
+      <span>Olá, {{userSession.nome}}</span>
+      <a href="/posts/create">Criar Post</a>
+      <a href="/logout">Sair</a>
+    {{else}}
+      <a href="/login">Login</a>
+      <a href="/register">Registrar</a>
+    {{/if}}
+  </nav>
+  <div class="container">
+    {{#if success_msg}}<p class="success">{{success_msg}}</p>{{/if}}
+    {{#if error_msg}}<p class="error">{{error_msg}}</p>{{/if}}
+    {{{body}}}
+  </div>
+</body>
+</html>

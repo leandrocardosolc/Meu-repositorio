@@ -1,0 +1,7 @@
+<% layout('layout') -%>
+<h1>Serviços</h1>
+<ul>
+  <% services.forEach(s => { %>
+    <li><a href="/services/<%= s.id %>"><%= s.name %></a> — R$ <%= s.price %></li>
+  <% }) %>
+</ul>

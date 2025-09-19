@@ -1,0 +1,16 @@
+<h2>Registrar</h2>
+<form action="/register" method="post">
+  <label>Nome</label><br><input type="text" name="nome" value="{{nome}}"><br>
+  <label>Email</label><br><input type="email" name="email" value="{{email}}"><br>
+  <label>Usuário</label><br><input type="text" name="usuario" value="{{usuario}}"><br>
+  <label>Senha</label><br><input type="password" name="senha"><br>
+  <label>Confirmar Senha</label><br><input type="password" name="senha2"><br>
+  <button type="submit">Registrar</button>
+</form>
+{{#if errors}}
+  <ul>
+    {{#each errors}}
+      <li>{{this.msg}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

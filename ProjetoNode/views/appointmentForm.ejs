@@ -1,0 +1,16 @@
+<% layout('layout') -%>
+<h1>Agendar Serviço</h1>
+<form method="post" action="/appointments/create">
+  <label>Nome: <input name="clientName" required></label><br>
+  <label>Telefone: <input name="phone" required></label><br>
+  <label>Serviço:
+    <select name="serviceId">
+      <% services.forEach(s => { %>
+        <option value="<%= s.id %>"><%= s.category %> - <%= s.name %> (R$ <%= s.price %>)</option>
+      <% }) %>
+    </select>
+  </label><br>
+  <label>Data/Hora: <input type="datetime-local" name="date" required></label><br>
+  <label>Observações: <textarea name="notes"></textarea></label><br>
+  <button type="submit">Confirmar</button>
+</form>

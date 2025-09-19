@@ -1,0 +1,14 @@
+<h2>Postagens</h2>
+{{#if posts.length}}
+  <ul>
+    {{#each posts}}
+      <li>
+        <strong>{{this.titulo}}</strong> — por {{this.User.nome}} <br>
+        {{this.conteudo}} <br>
+        <small>{{this.createdAt}}</small>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>Sem postagens.</p>
+{{/if}}

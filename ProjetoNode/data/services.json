@@ -1,0 +1,9 @@
+[
+  { "id": 1, "category": "Unhas", "name": "Manicure - esmaltação comum", "price": 35 },
+  { "id": 2, "category": "Unhas", "name": "Pedicure - esmaltação comum", "price": 45 },
+  { "id": 3, "category": "Unhas", "name": "Esmaltação em gel", "price": 80 },
+  { "id": 4, "category": "Cabelo", "name": "Escova", "price": 60 },
+  { "id": 5, "category": "Cabelo", "name": "Progressiva", "price": 180 },
+  { "id": 6, "category": "Cabelo", "name": "Cauterização", "price": 120 },
+  { "id": 7, "category": "Cabelo", "name": "Corte", "price": 70 }
+]

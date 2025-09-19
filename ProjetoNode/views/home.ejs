@@ -1,0 +1,16 @@
+<% layout('layout') -%>
+<h1>Bem-vindo ao Studio Beleza</h1>
+<div style="display:flex; gap:20px;">
+  <div style="flex:1; border:1px solid #ccc; padding:10px;">
+    <h2>Serviços & Preços</h2>
+    <ul>
+      <% services.forEach(s => { %>
+        <li><%= s.category %> - <%= s.name %>: R$ <%= s.price %></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div style="flex:1; border:1px solid #ccc; padding:10px;">
+    <h2>Agendamento</h2>
+    <p><a href="/appointments/create">Clique aqui para agendar</a></p>
+  </div>
+</div>
