@@ -1,1 +1,0 @@
-﻿New-MgUserAuthenticationPhoneMethod -UserId "balas@contoso.com" -phoneType "mobile" -phoneNumber "+1 7748933135"
