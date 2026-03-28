@@ -1,0 +1,217 @@
+/* ===== WRAPPER GERAL ===== */
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== BACKGROUND SOMENTE DESTA PÁGINA ===== */
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/imgs/backgrounnd.png");
+  background-size: 600px;
+  background-repeat: repeat;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* ===== HEADER ===== */
+.header {
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoImg {
+  width: 140px;
+}
+
+.exitBtn {
+  color: white;
+  background: #d35400;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* ===== CARD CENTRAL ===== */
+.container {
+  width: 700px;
+  max-width: 95%;
+  background: #d35400;
+  padding: 50px 60px;
+  color: white;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 15px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* ===== FORM ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formGroup label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  background: #ffffff;
+  color: #333;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* ===== ROWS ===== */
+.formRow {
+  display: flex;
+  gap: 15px;
+}
+
+.formGroupHalf {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* ===== CHECKBOXES ===== */
+.checkboxLine,
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkboxLabelSmall,
+.terms {
+  font-size: 14px;
+}
+
+.terms a {
+  text-decoration: underline;
+  color: white;
+}
+
+/* ===== BOTÃO ===== */
+.registerBtn {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background: white;
+  color: #d35400;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.registerBtn:hover {
+  background: #f0f0f0;
+}
+
+/* ===== LINK LOGIN ===== */
+.loginLink {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.loginLink a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* ===== DRAG & DROP AREA ===== */
+.dropzone {
+  width: 100%;
+  background: #ffffff;
+  border: 2px dashed #b34900;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  color: #d35400;
+  font-weight: bold;
+  margin-bottom: 22px;
+  cursor: pointer;
+  transition: 0.2s;
+  position: relative;
+}
+
+.dropzone p {
+  font-size: 16px;
+}
+
+.dropzone span {
+  display: block;
+  margin-top: 6px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.dragging {
+  background: #ffe1c4;
+  border-color: #ff7b22;
+}
+
+/* Input invisível, clicável */
+.fileInput {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Preview da imagem */
+.previewImage {
+  width: 100%;
+  max-height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+

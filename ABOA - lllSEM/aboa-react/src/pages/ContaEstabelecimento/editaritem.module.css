@@ -1,0 +1,200 @@
+/* ——— OVERLAY ——— */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: #00000075;
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* ——— MODAL ——— */
+.modal {
+  width: 100%;
+  max-width: 450px;
+  padding: 26px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 0 25px #0005;
+  animation: pop 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@keyframes pop {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+/* ——— FOTO DO ITEM ——— */
+.uploadArea {
+  border: 2px dashed #d35400;
+  background: #fff5eb;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.uploadArea p {
+  font-weight: 600;
+  color: #d35400;
+}
+
+.uploadArea span {
+  font-size: 13px;
+  color: #666;
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.previewImg {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin: 0 auto;
+  box-shadow: 0 0 12px #0003;
+}
+
+.removeImg {
+  margin-top: 10px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* ——— FORM FIELDS ——— */
+.modal label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+/* ——— ACTION BUTTONS ——— */
+.actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.cancelar {
+  background: #888;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.salvar {
+  background: linear-gradient(135deg, #e67e22, #d35400);
+  padding: 10px 22px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+.indisponivel {
+  opacity: 0.5;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.newPrice {
+  color: #d35400;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.saleTag {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #d35400;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+}
+
+.notAvailable {
+  color: #b00;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.promoText {
+  font-size: 0.75rem;
+  color: #d35400;
+  margin-top: 4px;
+}
+
+/* ——— SELECT PADRÃO ——— */
+.select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  background: #fafafa;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+/* quando focado */
+.select:focus {
+  border-color: #d35400;
+  background: #fff8f0;
+  box-shadow: 0 0 0 3px #d3540025;
+}
+
+/* ——— SELECT “TIPO DO ITEM” COM ICON (opcional) ——— */
+.selectTipo {
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23d35400' width='20' height='20' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 7l4.5 4 4.5-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 16px;
+}
+
+/* ——— OPÇÕES ——— */
+.select option {
+  font-size: 14px;
+  padding: 8px;
+}

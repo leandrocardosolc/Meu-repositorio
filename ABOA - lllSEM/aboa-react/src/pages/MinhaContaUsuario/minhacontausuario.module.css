@@ -1,0 +1,82 @@
+.pageWrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("/imgs/backgrounnd.png");
+  background-size: 600px;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  margin-top: 40px;
+  background: #d35400;
+  padding: 40px 60px;
+  border-radius: 14px;
+  color: white;
+  width: 600px;
+  max-width: 95%;
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.infoBox {
+  background: #ffffff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.infoBox p {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btnPrimary {
+  background: white;
+  color: #d35400;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnPrimary:hover {
+  background: #f3f3f3;
+}
+
+.btnLogout {
+  background: #ffeded;
+  color: #d35400;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btnLogout:hover {
+  background: #ffd3d3;
+}

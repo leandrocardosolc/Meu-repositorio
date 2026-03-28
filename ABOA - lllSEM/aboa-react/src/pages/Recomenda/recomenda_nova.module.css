@@ -1,0 +1,285 @@
+.recoPage {
+  background: #f5f5f5;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.recoNavbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d35400;
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.recoLogo img {
+  height: 60px;
+}
+
+.recoLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.recoLinks a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* MAIN SECTION */
+.recoMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 3rem;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+/* TEXTO DESTACADO */
+.recoInfo h1 {
+  font-size: 4.5rem;
+  color: #c94a1a;
+  font-weight: 900;
+}
+
+.recoName {
+  font-size: 3.5rem;
+  margin-top: 20px;
+  color: #222;
+}
+
+.recoDesc {
+  font-size: 1.7rem;
+  color: #444;
+  margin-top: 20px;
+  max-width: 550px;
+}
+
+/* BOTÕES */
+.recoButtons {
+  display: flex;
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.recoButtons button {
+  background: #e9a653;
+  color: white;
+  padding: 18px 40px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.recoButtons button:hover {
+  background: #d98e3c;
+  transform: scale(1.05);
+}
+
+.recoMiniMap {
+  margin-top: 18px;
+  max-width: 560px;
+  background: #fff;
+  border: 1px solid #e4d7ca;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.enderecoLinha {
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+.pinIcon {
+  font-size: 1.1rem;
+}
+
+.miniMapFrame {
+  width: 100%;
+  height: 190px;
+  border: 0;
+  border-radius: 10px;
+  display: block;
+}
+
+.comoChegarBtn {
+  margin-top: 10px;
+  display: inline-block;
+  background: #e9a653;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 9px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.comoChegarBtn:hover {
+  background: #d98e3c;
+}
+
+/* IMAGEM VERTICAL */
+.recoImageVertical {
+  width: 30%;
+  height: 450px;
+  background: black;
+  overflow: hidden;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recoImageVertical img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OUTRAS RECOMENDAÇÕES */
+.recoOtherTitle {
+  background: #d15b31;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.recoOtherSub {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+/* CARDS */
+.recoCards {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 2rem 3rem 2rem;
+  justify-content: space-between;
+}
+
+.recoCard {
+  width: 32%;
+  background: white;
+  border-radius: 10px;
+  padding-bottom: 1rem;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.recoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
+}
+
+.recoCardImg {
+  width: 100%;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px #0002;
+}
+
+.recoCardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .3s ease;
+}
+
+.recoCard:hover .recoCardImg img {
+  transform: scale(1.05);
+}
+
+.recoCardTitle {
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.recoCardDesc {
+  padding: 0 1rem;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.recoCardStars {
+  padding: 0.7rem 1rem;
+  color: #e9a653;
+  font-size: 1.2rem;
+}
+
+.recoCardBtn {
+  display: inline-block;
+  margin-left: 1rem;
+  background: #e9a653;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.recoCardBtn:hover {
+  background: #d98e3c;
+}
+
+.recoSearch {
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid #d35400;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+
+  .recoMain {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recoImageVertical {
+    width: 90%;
+    height: 400px;
+  }
+
+  .recoButtons {
+    justify-content: center;
+  }
+
+  .recoMiniMap {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .recoCards {
+    flex-direction: column;
+  }
+
+  .recoCard {
+    width: 100%;
+  }
+}

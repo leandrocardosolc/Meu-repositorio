@@ -1,0 +1,114 @@
+/* CONTAINER GERAL */
+.cadastroWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  background: transparent;
+  z-index: 10;
+}
+
+/* CARD CENTRAL */
+.leftSide {
+  width: 650px;
+  max-width: 95%;
+  background: #d35400;
+  padding: 60px 80px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  text-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 180px;
+  margin-bottom: 25px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 15px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* FORM */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form input {
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  color: #333333;
+  font-size: 1rem;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.checkboxRow label a {
+  color: white;
+  text-decoration: underline;
+}
+
+.btnCadastro {
+  margin-top: 18px;
+  padding: 12px;
+  background: white;
+  color: #d35400;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btnCadastro:hover {
+  background: #f0f0f0;
+}
+
+/* LINKS */
+.links {
+  margin-top: 25px;
+  font-size: 14px;
+}
+
+.links a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* WALLPAPER */
+.rightSide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/imgs/backgrounnd.png");
+  background-size: 600px;
+  background-repeat: repeat;
+  opacity: 1;
+  z-index: -1;
+  pointer-events: none;
+}

@@ -1,0 +1,75 @@
+.header {
+  width: 100%;
+  background-color: #d35400;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Container interno */
+.headerInner {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* Logo */
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerLogo {
+  height: 70px;
+  display: block;
+}
+
+/* Links da direita */
+.authLinks {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  color: white;
+}
+
+.authLinks a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.authLinks a:hover {
+  opacity: 0.8;
+}
+
+/* Saudação */
+.welcome {
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Botão Logout */
+.logoutBtn {
+  background: white;
+  color: #d35400;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logoutBtn:hover {
+  background: #f0f0f0;
+}

@@ -1,0 +1,118 @@
+/* Wrapper fixo sem scroll */
+.loginWrapper {
+  position: fixed;      /* ← trava a tela inteira */
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;     /* ← impede scrolagem vertical */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Wallpaper */
+.wallpaper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/imgs/backgrounnd.png");
+  background-repeat: repeat;
+  background-size: 550px;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Bloco laranja (lado esquerdo) */
+.circleSection {
+  background-color: #D35400;
+  width: 60%;
+  height: 150%;          /* ← antes era 150% (causava scroll)! */
+  border-top-right-radius: 80% 70%;
+  border-bottom-right-radius: 80% 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8%;
+  padding-right: 12%;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+/* Logo */
+.logo {
+  
+  top: 40px;
+  left: 8%;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* Conteúdo */
+.circleContent {
+  max-width: 450px;
+  width: 100%;
+  margin-top: -50px;   /* antes era -300px, isso quebrava layout */
+  z-index: 3;
+}
+
+.circleContent h2 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+/* Campos */
+.formGroup {
+  margin-bottom: 25px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: white;
+}
+
+/* Botão */
+.loginButton {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: white;
+  color: #D35400;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.loginButton:hover {
+  background-color: #f5f5f5;
+}
+
+/* Links */
+.links {
+  margin-top: 25px;
+}
+
+.links a {
+  color: white;
+  text-decoration: underline;
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
